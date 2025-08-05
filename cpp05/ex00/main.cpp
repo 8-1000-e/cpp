@@ -6,7 +6,7 @@
 /*   By: edubois- <edubois-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 12:23:10 by edubois-          #+#    #+#             */
-/*   Updated: 2025/08/04 12:56:04 by edubois-         ###   ########.fr       */
+/*   Updated: 2025/08/05 10:51:51 by edubois-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,10 @@ int main()
         std::cout << b2;
         std::cout << b3;
         std::cout << b4;
+        b2.DownGrade();
+        b3.UpGrade();
+        std::cout << b2;
+        std::cout << b3;
     }
     catch(const std::exception& e)
     {
@@ -50,6 +54,32 @@ int main()
         std::cout << m2;
     }
     catch(const std::exception &e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
+
+    std::cout << "\n\n";
+
+    try
+    {
+        Bureaucrat t1("jeanette", 1);
+        t1.UpGrade();
+        std::cout << t1;
+    }
+    catch (std::exception &e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
+    
+    std::cout << "\n\n";
+    
+        try
+    {
+        Bureaucrat t1("OUI", 150);
+        t1.DownGrade();
+        std::cout << t1;
+    }
+    catch (std::exception &e)
     {
         std::cerr << e.what() << std::endl;
     }
