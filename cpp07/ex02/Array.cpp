@@ -6,7 +6,7 @@
 /*   By: edubois- <edubois-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 12:11:58 by edubois-          #+#    #+#             */
-/*   Updated: 2025/08/06 14:24:51 by edubois-         ###   ########.fr       */
+/*   Updated: 2025/08/06 14:31:03 by edubois-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ Array<T> &Array<T>::operator=(const Array<T> &other)
 template <typename T>
 T &Array<T>::operator[](unsigned int i)
 {
-    if (i > this->size())
+    if (i >= this->size())
         throw IndexTooHightException();
     else
         return data[i];
@@ -63,7 +63,7 @@ T &Array<T>::operator[](unsigned int i)
 template <typename T>
 T &Array<T>::operator[](unsigned int i) const
 {
-    if (i > this->size())
+    if (i >= this->size())
         throw IndexTooHightException();
     else
         return data[i];
