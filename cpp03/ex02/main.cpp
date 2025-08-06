@@ -6,7 +6,7 @@
 /*   By: edubois- <edubois-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 14:07:17 by edubois-          #+#    #+#             */
-/*   Updated: 2025/04/24 14:11:28 by edubois-         ###   ########.fr       */
+/*   Updated: 2025/08/05 14:58:08 by edubois-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,4 @@ int main()
     frag1.beRepaired(10);
 
     std::cout << std::endl;
-    return 0;
 }
